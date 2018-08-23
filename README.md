@@ -26,6 +26,7 @@ Setup the variables as below:
     let SHA3_NEW_SUBDOMAIN_HASH = web3.utils.sha3('<SUB_DOMAIN_STR>') //ex : mario
     
 Run
+
       node ens-testutils.js
 
 This will carry out all steps of registering domains/subdomains and reverse registering the address.
