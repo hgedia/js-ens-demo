@@ -1,0 +1,84 @@
+module.exports.getReverseRegistrarContract = function getReverseRegistrarContract(web3,contractAddr) {
+
+var reverseRegistrarContract = new web3.eth.Contract([
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "name": "claim",
+        "outputs": [
+            {
+                "name": "node",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "ens",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "addr",
+                "type": "address"
+            }
+        ],
+        "name": "node",
+        "outputs": [
+            {
+                "name": "ret",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "rootNode",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "ensAddr",
+                "type": "address"
+            },
+            {
+                "name": "node",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "type": "constructor"
+    }
+], contractAddr);
+
+reverseRegistrarContract.options.gas = 5000000;
+return reverseRegistrarContract;
+}
