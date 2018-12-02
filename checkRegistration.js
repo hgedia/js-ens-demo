@@ -49,11 +49,11 @@ const start = async function(){
 
     */
     sectionBegin("FORWARD BACKWARD RESOLUTION TEST")
-    const FULL_DOMAIN = 'hi.livepeer.eth'
+    const FULL_DOMAIN = 'bye.livepeer.eth'
     const NAMEHASH_FULL_DOMAIN = namehash.hash(FULL_DOMAIN)
     const ENS_CONTRACT_ADDRESS = '0xdc8c103fa851fd82519aa746bd9d09d0f23f1849'
     const PUBLIC_RESOLVER_CONTRACT_ADDRESS = "0x2406b1d278063dca34a2a878a983d5489f10d5ab"
-    const USER_ADDRESS = '0x1e68cc2Cfd9f8F5eb530419922fBF7ac82b7EB0F'
+    const USER_ADDRESS = '0x8Fd3dBBc0cce5b42c9775A921D0982455E53e681'
     
     let web3 = getWeb3();    
     let ens = ENSContract.getEnsContract(web3, ENS_CONTRACT_ADDRESS); 
